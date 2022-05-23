@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head role="document-details">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper" role="Wrapper-div">
+
+        <main>
+
+            <section class="headder" role="ID">
+                <p>ADVICE <span id="advice-id">#1 </span></p>
+            </section>
+
+            <section role="content" id="advice-content">
+                " Don't assume anything is possible or impossible until you've asked the people who will be doing the
+                work."
+            </section>
+
+            <div role="vertical-line" class="pattern">
+                <img src="images/pattern-divider-desktop.svg" alt="">
+            </div>
+
+
+            <div class="btn">
+                <button id="btn">
+                    <img src="images/icon-dice.svg">
+                </button>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script>
+
+        let btn = document.getElementById('btn')
+        let id = document.getElementById('advice-id')
+        let content = document.getElementById('advice-content')
+
+        btn.addEventListener('click', () => {
+            fetch("https://api.adviceslip.com/advice").then(function (resp) {
+                return resp.json()
+            })
+                .then(function (data) {
+                    id.innerText = '#' + data.slip.id;
+                    content.innerText = '"' + data.slip.advice + '"'
+                })
+        })
+
+
+    </script>
+</body>
+
+</html>

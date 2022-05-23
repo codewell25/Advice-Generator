@@ -1,0 +1,90 @@
+body {
+  background-color: #1f2632;
+  font-family: 'Manrope', sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 38%;
+  height: 300px;
+  background-color: #323a49;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+main {
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.pattern img {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.headder p {
+  margin: 0;
+  color: #52ffa8;
+  letter-spacing: 2px;
+}
+
+#advice-content {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: white;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn button {
+  border: none;
+  background-color: #52ffa8;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 248px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  -webkit-box-shadow: 1px 1px 15px 20px rgba(82, 255, 168, 0.7);
+          box-shadow: 1px 1px 15px 20px rgba(82, 255, 168, 0.7);
+}
+
+@media (max-width: 1020px) {
+  .wrapper {
+    width: 60%;
+  }
+  .btn button {
+    left: 223px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+  .btn button {
+    left: 145px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
